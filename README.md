@@ -2,9 +2,9 @@
 
 ### Cheat sheets for various languages
 
-- TypeScript (close to completion)
-- JavaScript (incomplete)
-- PostgreSQL/SQL (incomplete)
+- [TypeScript](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md) (close to completion)
+- [JavaScript](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md) (incomplete)
+- [PostgreSQL/SQL](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md) (incomplete)
 
 ### Usage
 
