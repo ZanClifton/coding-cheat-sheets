@@ -256,7 +256,7 @@ function clone<T, U>(source: T, options: U) {...etc.
 ### 5: SET UP
 [Official Installation Instructions](https://www.typescriptlang.org/download)
   
-Install the TypeScript compiler globally and check it:
+Install the TypeScript compiler globally and run it:
 ```
 $ npm install -g typescript
 $ tsc
@@ -266,10 +266,38 @@ Or locally for your project:
 $ npm install typescript --save-dev
 $ npx tsc
 ```
+ 
+TypeScript files have the `.ts` extension. Running the compiler will create ```.js``` files next to your ```.ts``` files, although instructions for configuring this are included below.
+  
 #
 ### 6: CONFIGURATION - tsconfig.json
 
-#### A: JavaScript Files
+#### A: File Creation and Initial Set Up
+In the root of your app, create a file called `tsconfig.json`.
+
+Add the following content:
+
+```
+{
+    "include": ["src/**/*"], // if not set, all files and folders in the project will be included by default
+}
+```
+
+This is an instruction to include all files in the src folder and its subfolders within the scope of the project. If not set, it will include everything by default.
+
+You can control which version of JS the compiler uses (currently defaults to ES3), and where it outputs to, by adding the following to your `tsconfig.json` file:
+
+```
+{
+    "include": ["src/**/*"]",
+    "compilerOptions": {
+        "target": "ES6", // most modern browsers use EcmaScript 6, so by setting it to this you are making your app widely accessible
+        "outDir": "build", // by default, TypeScript generates the .js file next to the .ts file, this outputs the .js file elsewhere
+    }
+}
+```
+
+#### B: JavaScript Files
 
 Enable TypeScript to check JavaScript files that are being used alongside your TypeScript files by adding the following to your `tsconfig.json` file in the `compilerOptions` object:
 
@@ -278,7 +306,7 @@ Enable TypeScript to check JavaScript files that are being used alongside your T
 "checkJs": true // reports errors in .js files in TS version 2.3 or later
 ```
 
-#### B: Native APIs
+#### C: Native APIs
 
 Allow TypeScript to account for native JavaScript and dom APIs by adding them to the `compilerOptions` object, e.g.:
 
@@ -288,7 +316,7 @@ Allow TypeScript to account for native JavaScript and dom APIs by adding them to
 
 Again, this is similar to using the 'any' type, as you're telling TypeScript these APIs will be available in your target environments.
   
-#### C: Third Party APIs
+#### D: Third Party APIs
   
 A quick (but not that helpful) fix:
 ```
