@@ -253,8 +253,21 @@ function clone<T, U>(source: T, options: U) {...etc.
 **Can also be used on interfaces and classes!**
 
 #
-
-### 5: CONFIGURATION - tsconfig.json
+### 5: SET UP
+[Official Installation Instructions](https://www.typescriptlang.org/download)
+  
+Install the TypeScript compiler globally and check it:
+```
+$ npm install -g typescript
+$ tsc
+```
+Or locally for your project:
+```
+$ npm install typescript --save-dev
+$ npx tsc
+```
+#
+### 6: CONFIGURATION - tsconfig.json
 
 #### A: JavaScript Files
 
@@ -267,10 +280,28 @@ Enable TypeScript to check JavaScript files that are being used alongside your T
 
 #### B: Native APIs
 
-Allow TypeScript to account for native APIs by adding them to the `compilerOptions` object, e.g.:
+Allow TypeScript to account for native JavaScript and dom APIs by adding them to the `compilerOptions` object, e.g.:
 
 ```
 "lib": ["es2015.promise", "dom"]
 ```
 
-Again, this is similar to using the 'any' type. It'll fix the errors but it hasn't necessarily fixed any problems.
+Again, this is similar to using the 'any' type, as you're telling TypeScript these APIs will be available in your target environments.
+  
+#### C: Third Party APIs
+  
+A quick (but not that helpful) fix:
+```
+declare var Vue: any;
+```
+
+A much better option is to follow the following steps.
+  
+Many libraries include TypeScript metadata in their bundles. For these, you can use the library's NPM module.
+  
+If a library you want to use does not, you can go to the [NPM website](https://www.npmjs.com) and search ```@types``` along with the name of the library you're looking to use. [DefinitelyTyped](https://definitelytyped.org) maintain TypeScript metadata for almost all popular frameworks.
+  
+![An example of the installation command for lodash, "npm install --save @types/lodash"](https://user-images.githubusercontent.com/96394256/179187920-db272c3d-9e66-4667-9ad5-8af7c06179f3.png)
+
+Copy the command to into the terminal and run it in the root folder of your app. 
+#  
