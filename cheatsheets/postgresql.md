@@ -1,6 +1,6 @@
 # PostgreSQL Cheat Sheet
 
-## SELECT Query
+### 1: SELECT Query
 ```
 SELECT table1.*, table2.column2
 FROM table1
@@ -11,7 +11,8 @@ HAVING condition
 ORDER BY table2.column1 ASC|DESC;
 ```
 
-## SELECT Keywords
+#
+### 2: SELECT Keywords
 
 | Keyword  | Usage                                  | Format
 |:---------|:---------------------------------------|:----------------------------------|
@@ -20,8 +21,8 @@ ORDER BY table2.column1 ASC|DESC;
 | ```IN```       | Matches to any value within a list     | ```WHERE category IN ('Example')```  |
 | ```LIKE```     | Wildcard matching with _ or %          | ```WHERE column LIKE '%This%'```     |
 
-
-## JOINS
+#
+### 3: JOINS
 
 | Keyword  | Usage                                  |
 |:---------|:---------------------------------------|
@@ -32,7 +33,8 @@ ORDER BY table2.column1 ASC|DESC;
 
 ![Joins Venn Diagram](https://github.com/ZanClifton/postgresql-cheat-sheet/blob/main/images/sql-joins.png)
 
-## CASE Statement
+#
+### 4: CASE Statement
 
 ```
 CASE
@@ -41,8 +43,8 @@ CASE
   ELSE 'Unknown'
 END
 ```
-
-## Common Functions
+#
+### 5: Common Functions
 | Keyword | Usage                                 | Format                                       |
 |:--------|:--------------------------------------|:---------------------------------------------|
 |```CAST```     | Converts expression to data type specified | ```CAST(expression AS DATATYPE)```            |
@@ -61,8 +63,8 @@ END
 |```TRIM```     | Trims strings of excess spaces at the start and end | ```TRIM('  string    ')``` |
 |```TRUNC```    | Truncates a number to specified decimal places | ```TRUNC(input_value, decimals)``` |
 |```UPPER```    | Converts all characters in a string to uppercase | ```UPPER('string')``` |
-
-## Aggregate Functions
+#
+### 6: Aggregate Functions
 
 Where an aggregate function is used and additional columns are selected, you must ```GROUP BY``` the other columns you wish to return. If you ```GROUP BY``` a ```PRIMARY KEY``` it is not required to include the other columns.
 
@@ -75,21 +77,21 @@ Where an aggregate function is used and additional columns are selected, you mus
 |```SUM``` | Returns the sum of a set of values | ```SUM(set)``` |
 |```  
 
-### DISTINCT / ALL
+#### DISTINCT / ALL
 
 ```aggregate_function (DISTINCT | ALL expression)```
 
 If you use the ```ALL``` modifier, the aggregate function will use all available values in the set for its calculation or evaluation. In contrast, ```DISTINCT``` causes the aggregate function to ignore duplicate values and only consider the unique ones.
-
-## Constraints
+#
+### 7: Constraints
 | Keyword | Usage                                 | 
 |:--------|:--------------------------------------|
 | ```PRIMARY KEY``` | Only one on each table, it is the unique identifier for the record on a given row |
 | ```UNIQUE``` | The item in this column cannot be duplicated on any other row |
 |```NOT NULL``` | There must be a value is this column on each row |
 | ```DEFAULT``` | This value is supplied if no value is specified when the information is entered |
-
-## Manipulation
+#
+### 8: Manipulation
 
 | Keyword | Usage                                 | Format |
 |:--------|:--------------------------------------|:-------|
@@ -101,28 +103,28 @@ If you use the ```ALL``` modifier, the aggregate function will use all available
 
 <!-- ## Junction / Link Tables -->
 
+#
+### 9: Hints and Tips
 
-## Hints and Tips
-
-### Restarting the PSQL server
+#### Restarting the PSQL server
 ```
 #restart PostgreSQL service
 sudo service postgresql restart
 ```
 And in case that's not enough, refer to [this](https://stackoverflow.com/questions/31645550/postgresql-why-psql-cant-connect-to-server).
 
-### Case Conventions
+#### Case Conventions
 
 You don't have to capitalise keywords, but convention dictates that they are capitalised, and values are not.
 
-### Quote Marks
+#### Quote Marks
 
 SQL likes single quotes. It really does not like double quotes.
 
-### Semicolons
+#### Semicolons
 
 End your query with a semicolon to tell SQL you're done.
 
-### Decimals
+#### Decimals
 
 When performing a calculation which requires rounding of a number of decimal places, ensure you have included sufficient zeroes after the decimal point e.g. ```CEIL(1901 / 100.00) AS century``` .
