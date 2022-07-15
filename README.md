@@ -1,8 +1,18 @@
 # Coding Cheat Sheets
 
-### Cheat sheets for various languages
+### CONTENTS
+- [Usage](https://github.com/ZanClifton/coding-cheat-sheets/edit/main/README.md#usage)
+- [TypeScript](https://github.com/ZanClifton/coding-cheat-sheets/edit/main/README.md#typescript)
+- [JavaScript](https://github.com/ZanClifton/coding-cheat-sheets/edit/main/README.md#javascript)
+- [PostgreSQL/SQL](https://github.com/ZanClifton/coding-cheat-sheets/edit/main/README.md#postgresqlsql)
 
-#### [TypeScript](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md)
+#
+### USAGE
+
+You're welcome to refer to these on GitHub, fork the repo or clone it if you think it will be helpful; however, the best memorisation and understanding comes from creating your own and practising with it.
+
+#
+### [TYPESCRIPT](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md)
 
 0. [TYPES](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#0-types)
 1. [VARIABLES](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#1-variables)
@@ -12,8 +22,8 @@
 5. [SET UP](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#5-set-up)
 6. [CONFIGURATION - tsconfig.json](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#6-configuration---tsconfigjson)
 
-
-#### [JavaScript](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md)
+#
+### [JAVASCRIPT](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md)
 
 1. [Variables](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/javascript.md#1-variables)
 2. [Values](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/javascript.md#2-values)
@@ -22,7 +32,8 @@
 5. [Hints and Tips](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/javascript.md#5-hints-and-tips)
 <!-- 6. []() -->
 
-#### [PostgreSQL/SQL](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md)
+#
+### [POSTGRESQL/SQL](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md)
 1. [SELECT Query](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#1-select-query)
 2. [SELECT Keywords](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#2-select-keywords)
 3. [JOINS](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#3-joins)
@@ -33,10 +44,6 @@
 8. [Manipulation](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#8-manipulation)
 9. [Hints and Tips](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#9-hints-and-tips)
 
-
-### Usage
-
-You're welcome to refer to these on GitHub, fork the repo or clone it if you think it will be helpful; however, the best memorisation and understanding comes from creating your own and practising with it.
 
 
 <!-- 
