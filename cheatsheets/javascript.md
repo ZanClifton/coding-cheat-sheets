@@ -17,7 +17,7 @@
 | `let z = "zzz"`                | block scope local variable                          |
 
 #
-### Values
+### 2: Values
 
 | Value                                 | Type    |
 | :------------------------------------ | :------ |
@@ -26,7 +26,7 @@
 | `"flower"`, `"John"`                  | string  |
 | `undefined`, `null`, `Infinity`       | special |
 #
-### Operators
+### 3: Operators
 
 | Operator | What It Does                                           |
 | :------- | :----------------------------------------------------- |
@@ -54,9 +54,9 @@
 | `x %= y` | x = x % y                                              |
 | `?`      | ternary (like a shorthand `if/else`)                   |
 #
-### Functions
+### 4: Functions
 
-#### SYNTAX
+#### A: SYNTAX
 
 ```
 function name(parameter1, parameter2, parameter 3) {
@@ -64,7 +64,7 @@ function name(parameter1, parameter2, parameter 3) {
 }
 ```
 
-#### CALLING/INVOKING THE FUNCTION
+#### B: CALLING/INVOKING THE FUNCTION
 
 ##### Ex. 1
 
@@ -91,6 +91,6 @@ console.log(x);
 
 ![multiply console.log](https://github.com/ZanClifton/javascript-cheat-sheet/blob/main/images/multiply-console-log.png)
 #
-### Hints and Tips
+### 5: Hints and Tips
 
 JavaScript is a loosely typed language which means it doesn't require you to declare the type of variable. It can handle comparisons such as `3 == "3"` (as in, the number 3 loosely equals the string "3"), for example, without any issues. But watch out! It definitely handles `3 + 3` differently to `3 + "3"`!
