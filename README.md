@@ -1,10 +1,10 @@
 # Coding Cheat Sheets
 
 ### CONTENTS
-- [Usage](https://github.com/ZanClifton/coding-cheat-sheets/edit/main/README.md#usage)
-- [TypeScript](https://github.com/ZanClifton/coding-cheat-sheets/edit/main/README.md#typescript)
-- [JavaScript](https://github.com/ZanClifton/coding-cheat-sheets/edit/main/README.md#javascript)
-- [PostgreSQL/SQL](https://github.com/ZanClifton/coding-cheat-sheets/edit/main/README.md#postgresqlsql)
+- [Usage](https://github.com/ZanClifton/coding-cheat-sheets#usage)
+- [TypeScript](https://github.com/ZanClifton/coding-cheat-sheets#typescript)
+- [JavaScript](https://github.com/ZanClifton/coding-cheat-sheets#javascript)
+- [PostgreSQL/SQL](https://github.com/ZanClifton/coding-cheat-sheets#postgresqlsql)
 
 #
 ### USAGE
