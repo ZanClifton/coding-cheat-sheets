@@ -57,6 +57,14 @@ The compiler will find the first usage of the variable in the code, determine wh
 let name; // data type is 'any' and value is set to undefined by default
 ```
 
+#### E: Casting a Variable as the Any Type
+
+```
+let age: number
+
+age = "Twenty One" as any
+```
+
 #
 
 ### 2: INTERFACES
