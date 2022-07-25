@@ -1,5 +1,13 @@
 # JavaScript Cheat Sheet
 
+### Contents
+
+1. [Variables](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/javascript.md#1-variables)
+2. [Values](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/javascript.md#2-values)
+3. [Operators](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/javascript.md#3-operators)
+4. [Functions](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/javascript.md#4-functions)
+5. [Hints and Tips](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/javascript.md#5-hints-and-tips)
+#
 ### 1: Variables
 
 | Code                           | What It Is                                          |
