@@ -220,7 +220,7 @@ let customer: Person = {
 
 #
 
-### 4: GENERICS
+### 4: FUNCTIONS AND GENERICS
 
 Generics decorate a component with a type syntax in such a way that it can describe a variety of types rather than only one.
 
@@ -236,7 +236,7 @@ function clone(source) {
 const cloned = clone(customer)
 ```
 
-#### B: A Bad Solution
+#### B: An Adequate Solution
 
 Specifying that the output type should be the same as the input type will certainly work, but limit its use to only one type.
 
