@@ -270,6 +270,30 @@ function clone<T, U>(source: T, options: U) {...etc.
 
 **Can also be used on interfaces and classes!**
 
+#### E: Extends
+This accepts multiple generic type parameters, but also ensures that the return type at least matches the properties of the input. It doesn't literally derive from the first type; it only has to match it, and then add any other properties.
+  
+In this example, `Contact` and `UserContact` are totally separate, but happen to contain some of the same properties:
+```
+interface Contact {
+  id: number;
+  name: string;
+}
+  
+interface UserContact {
+  id: number;
+  name: string;
+  username: string;
+}
+  
+function clone<T1, T2 extends T1>(source: T1): T2 {
+  return Object.apply({}, source);
+}  
+  
+const a: Contact = {id: 123, name: "Homer Simpson" };
+const b: clone<Contact, UserContact>(a)
+```
+  
 #
 ### 5: SET UP
 [Official Installation Instructions](https://www.typescriptlang.org/download)
