@@ -6,7 +6,7 @@
 1. [VARIABLES](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#1-variables)
 2. [INTERFACES](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#2-interfaces)
 3. [ENUMS](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#3-enums)
-4. [GENERICS](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#4-generics)
+4. [FUNCTIONS AND GENERICS](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#4-functions-and-generics)
 5. [SET UP](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#5-set-up)
 6. [CONFIGURATION - tsconfig.json](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#6-configuration---tsconfigjson)
 #
