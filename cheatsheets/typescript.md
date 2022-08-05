@@ -7,8 +7,9 @@
 2. [INTERFACES](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#2-interfaces)
 3. [ENUMS](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#3-enums)
 4. [FUNCTIONS AND GENERICS](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#4-functions-and-generics)
-5. [SET UP](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#5-set-up)
-6. [CONFIGURATION - tsconfig.json](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#6-configuration---tsconfigjson)
+5. [MORE ABOUT UNIONS](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#5-type-aliases)
+6. [SET UP](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#5-set-up)
+7. [CONFIGURATION - tsconfig.json](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#6-configuration---tsconfigjson)
 #
 ### 0: TYPES
 
@@ -293,9 +294,41 @@ function clone<T1, T2 extends T1>(source: T1): T2 {
 const a: Contact = {id: 123, name: "Homer Simpson" };
 const b: clone<Contact, UserContact>(a)
 ```
+
+### 5: TYPE ALIASES
+Using type aliases, two interfaces can be combined into a type that contains the information from both.
+
+```
+interface Contact {
+  id: number;
+  name: ContactName;
+  birthDate?: Date;
+  status?: ContactStatus;
+}
+
+interface Address {
+  line1: string;
+  line2: string;
+  province: string;
+  region: string;
+  postalCode: string;
+}
   
+```
+
+Enums add more code to your final output. Type aliases can also be used to cut that down. This is a another alternative to [literal values](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/typescript.md#e-literal-values), above. TypeScript will limit the inputs for you, and you don't have to reference the enum to see what they are.
+```
+enum Status {
+    todo = "todo",
+    inProgress = "in-progress",
+    done = "done"
+}
+  
+type Status = "todo" | "in-progress" | "done"
+
+```
 #
-### 5: SET UP
+### 6: SET UP
 [Official Installation Instructions](https://www.typescriptlang.org/download)
   
 Install the TypeScript compiler globally and run it:
@@ -312,7 +345,7 @@ $ npx tsc
 TypeScript files have the `.ts` extension. Running the compiler will create ```.js``` files next to your ```.ts``` files, although instructions for configuring this are included below.
   
 #
-### 6: CONFIGURATION - tsconfig.json
+### 7: CONFIGURATION - tsconfig.json
 
 #### A: File Creation and Initial Set Up
 In the root of your app, create a file called `tsconfig.json`.
