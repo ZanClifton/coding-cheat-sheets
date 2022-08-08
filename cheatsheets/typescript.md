@@ -408,3 +408,23 @@ If a library you want to use does not, you can go to the [NPM website](https://w
 
 Copy the command to into the terminal and run it in the root folder of your app. 
 #  
+
+### 8: KEYOF
+
+Where an object has explicit keys, using this creates a union type with those keys. In the example below, `keyof Person` creates a union type of "name" and "age"; other strings will not be allowed.
+  
+```
+interface Person {
+  name: string;
+  age: number;
+}
+
+function printPersonProperty(person: Person, property: keyof Person) {
+  console.log(`Printing person property ${property}: "${person[property]}"`);
+}
+let person = {
+  name: "Zan",
+  age: 21
+};
+printPersonProperty(person, "name"); // Printing person property name: "Zan"
+```
