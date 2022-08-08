@@ -419,8 +419,8 @@ interface Person {
   age: number;
 }
 
-function printPersonProperty(person: Person, property: keyof Person) {
-  console.log(`Printing person property ${property}: "${person[property]}"`);
+function getValue(source: Person, property: keyof Person) {
+  return source[property];
 }
   
 let person = {
@@ -428,6 +428,18 @@ let person = {
   age: 21
 };
   
-printPersonProperty(person, "name"); // if "name" is misspelled or typoed (e.g. "nmae" or "naem") TypeScript now lets you know!
+getValue(person, "name"); // if "name" is misspelled (e.g. "nmae" or "naem") TypeScript lets you know!
 
+```
+Better yet, the function above can be refactored into a generic function, as below:
+```
+function getValue<T>(source: T, property: keyof T) {
+  return source[property];
+}
+```
+The `keyof` operator can also be used to constrain generic types: 
+```
+function getValue<T, U extends keyof T>(source: T, property: U) {
+  return source[property];
+}
 ```
