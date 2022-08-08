@@ -422,9 +422,12 @@ interface Person {
 function printPersonProperty(person: Person, property: keyof Person) {
   console.log(`Printing person property ${property}: "${person[property]}"`);
 }
+  
 let person = {
   name: "Zan",
   age: 21
 };
-printPersonProperty(person, "name"); // Printing person property name: "Zan"
+  
+printPersonProperty(person, "name"); // if "name" is misspelled or typoed (e.g. "nmae" or "naem") TypeScript now lets you know!
+
 ```
