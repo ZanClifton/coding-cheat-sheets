@@ -443,3 +443,71 @@ function getValue<T, U extends keyof T>(source: T, property: U) {
   return source[property];
 }
 ```
+#
+### 9: TYPEOF
+```
+function toContact(nameOrContact: string | Contact): Contact {
+  if (typeof nameOrContact === "object")       
+    return {
+      id: nameOrContact.id,
+      name: nameOrContact.name,
+      status: nameOrContact.status
+    }
+  }
+  else {
+    return {
+      id: 0,
+      name: nameOrContact,
+      status: "active"
+    }
+  }
+}
+```
+#  
+### 10: INDEXED ACCESS TYPES
+```
+interface Contact {
+  id: number;
+  name: string;
+  status: ContactStatus;
+  address: Address;
+}
+
+type Awesome = Contact["address"]["postalCode"]
+
+interface ContactEvent {
+  contactId: Contact["id"]; // explicit link to Contact interface, and id key
+}
+```
+  
+<!-- ```
+interface Address {
+    street: string;
+    province: string;
+    postalCode: string;
+}
+  
+interface Contact {
+    id: number;
+    name: string;
+    status: ContactStatus;
+    address: Address;
+}
+
+type Awesome = Contact["address"]["postalCode"]
+
+function getValue<T, U extends keyof T>(source: T, propertyName: U) {
+    return source[propertyName];
+}
+``` -->
+  
+#
+### 11: RECORDS
+
+![Type 'number' is not assignable to type 'string'](https://user-images.githubusercontent.com/96394256/183680885-991f3cab-30b3-46e6-a7a6-48ac663d7a22.png)
+
+This is not an issue with the 'number' key (which is a valid string), but with the type of the value. You can fix this by adding the value types you are using to the type definition, with a union.
+  
+  
+![Screenshot 2022-08-09 at 15 53 42](https://user-images.githubusercontent.com/96394256/183682436-40dd98d2-915b-4653-9ef3-9a426a045119.png)
+
