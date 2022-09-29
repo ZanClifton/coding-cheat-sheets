@@ -11,7 +11,10 @@
 7. [Constraints](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#7-constraints)
 8. [Manipulation](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#8-manipulation)
 9. [Hints and Tips](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#9-hints-and-tips)
+10. [Things to Add](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#10-things-to-add)
+
 #
+
 ### 1: SELECT Query
 ```
 SELECT table1.*, table2.column2
@@ -140,3 +143,8 @@ End your query with a semicolon to tell SQL you're done.
 #### Decimals
 
 When performing a calculation which requires rounding of a number of decimal places, ensure you have included sufficient zeroes after the decimal point e.g. ```CEIL(1901 / 100.00) AS century``` .
+
+### 10: Things to Add
+
+- Nested queries
+- Window Functions
