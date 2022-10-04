@@ -148,4 +148,6 @@ When performing a calculation which requires rounding of a number of decimal pla
 
 - Nested queries
 - Window Functions
-- - Rank()
+ - RANK()
+ - DENSE_RANK()
+ - PARTITION BY
