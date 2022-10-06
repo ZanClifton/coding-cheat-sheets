@@ -149,5 +149,6 @@ When performing a calculation which requires rounding of a number of decimal pla
 - Nested queries
 - Window Functions
  - RANK()
- - DENSE_RANK()
+ - DENSE_RANK() (RANK but it forces numbering to continue sequentially)
  - PARTITION BY
+ - DISTINCT ON (Selects first item in a group that is being sorted on)
