@@ -144,11 +144,28 @@ End your query with a semicolon to tell SQL you're done.
 
 When performing a calculation which requires rounding of a number of decimal places, ensure you have included sufficient zeroes after the decimal point e.g. ```CEIL(1901 / 100.00) AS century``` .
 
-### 10: Things to Add
+### 10: DISTINCT ON
+
+This is a query that is unique to PostgreSQL. It should not be confused with the `DISTINCT` query.
+
+`DISTINCT ON` mimics a `GROUP BY` but returns only the first row of each group, and requires an `ORDER BY` for consistency. It can be applied to a single column, or multiple. The same grouping has to be the first listed where there are multiple columns selected to `ORDER BY`. 
+
+It enables us to keep the first row of the returned results after grouping and order.
+
+"Put the logs into groups unique by url (ON (url)), sort each of these groups by most recent (ORDER BY url, timestamp DESC) and then return fields for the first record in each of these groups (url, request_duration).":
+
+```
+SELECT DISTINCT ON (url) url, request_duration
+FROM logs
+ORDER BY url, timestamp DESC
+```
+
+
+### 11: Things to Add
 
 - Nested queries
 - Window Functions
  - RANK()
  - DENSE_RANK() (RANK but it forces numbering to continue sequentially)
  - PARTITION BY
- - DISTINCT ON (Grabs the first in the group that would be selected by ORDER BY - has to be first listed where there are multiple columns selected to ORDER BY)
+ - DISTINCT ON ()
