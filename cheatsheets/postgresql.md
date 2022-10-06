@@ -151,4 +151,4 @@ When performing a calculation which requires rounding of a number of decimal pla
  - RANK()
  - DENSE_RANK() (RANK but it forces numbering to continue sequentially)
  - PARTITION BY
- - DISTINCT ON (Selects first item in a group that is being sorted on)
+ - DISTINCT ON (Selects first row only in a group that is being sorted on - has to be first listed where there are multiple columns selected to ORDER ON)
