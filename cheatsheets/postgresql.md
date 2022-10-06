@@ -10,8 +10,9 @@
 6. [Aggregate Functions](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#6-aggregate-functions)
 7. [Constraints](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#7-constraints)
 8. [Manipulation](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#8-manipulation)
-9. [Hints and Tips](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#9-hints-and-tips)
-10. [Things to Add](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#10-things-to-add)
+9. [DISTINCT ON Query](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#9-distinct-on-query)
+10. [Hints and Tips](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#10-hints-and-tips)
+11. [Things to Add](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#11-things-to-add)
 
 #
 
@@ -90,7 +91,7 @@ Where an aggregate function is used and additional columns are selected, you mus
 |```MAX``` | Returns the maximum value in a set of values | ```MAX(set)``` |
 |```MIN``` | Returns the minimum value in a set of values | ```MIN(set)``` |
 |```SUM``` | Returns the sum of a set of values | ```SUM(set)``` |
-|```  
+  
 
 #### DISTINCT / ALL
 
@@ -103,9 +104,11 @@ If you use the ```ALL``` modifier, the aggregate function will use all available
 |:--------|:--------------------------------------|
 | ```PRIMARY KEY``` | Only one on each table, it is the unique identifier for the record on a given row |
 | ```UNIQUE``` | The item in this column cannot be duplicated on any other row |
-|```NOT NULL``` | There must be a value is this column on each row |
+|```NOT NULL``` | There must be a value in this column on each row |
 | ```DEFAULT``` | This value is supplied if no value is specified when the information is entered |
+
 #
+
 ### 8: Manipulation
 
 | Keyword | Usage                                 | Format |
@@ -119,32 +122,8 @@ If you use the ```ALL``` modifier, the aggregate function will use all available
 <!-- ## Junction / Link Tables -->
 
 #
-### 9: Hints and Tips
 
-#### Restarting the PSQL server
-```
-#restart PostgreSQL service
-sudo service postgresql restart
-```
-And in case that's not enough, refer to [this](https://stackoverflow.com/questions/31645550/postgresql-why-psql-cant-connect-to-server).
-
-#### Case Conventions
-
-You don't have to capitalise keywords, but convention dictates that they are capitalised, and values are not.
-
-#### Quote Marks
-
-SQL likes single quotes. It really does not like double quotes.
-
-#### Semicolons
-
-End your query with a semicolon to tell SQL you're done.
-
-#### Decimals
-
-When performing a calculation which requires rounding of a number of decimal places, ensure you have included sufficient zeroes after the decimal point e.g. ```CEIL(1901 / 100.00) AS century``` .
-
-### 10: DISTINCT ON
+### 9: DISTINCT ON
 
 This is a query that is unique to PostgreSQL. It should not be confused with the `DISTINCT` query.
 
@@ -160,12 +139,41 @@ FROM logs
 ORDER BY url, timestamp DESC
 ```
 
+#
+
+### 10: Hints and Tips
+
+#### Restarting the PSQL server
+```
+#restart PostgreSQL service
+sudo service postgresql restart
+```
+And in case that's not enough, refer to [this](https://stackoverflow.com/questions/31645550/postgresql-why-psql-cant-connect-to-server).
+
+#### Case Conventions
+
+You don't have to capitalise keywords, but convention dictates that they are capitalised, and values are not.
+
+#### Quote Marks
+
+SQL uses single quotes for strings. Double quotes are sometimes used to indicate identifiers within the database, e.g. tables, column names and rows.
+
+#### Semicolons
+
+End your query with a semicolon to tell SQL you're done.
+
+#### Decimals
+
+When performing a calculation which requires rounding of a number of decimal places, ensure you have included sufficient zeroes after the decimal point e.g. ```CEIL(1901 / 100.00) AS century``` .
+
+#
 
 ### 11: Things to Add
 
+- Junction/Link Tables
 - Nested queries
 - Window Functions
- - RANK()
- - DENSE_RANK() (RANK but it forces numbering to continue sequentially)
- - PARTITION BY
- - DISTINCT ON ()
+  - RANK()
+  - DENSE_RANK() (RANK but it forces numbering to continue sequentially)
+  - PARTITION BY
+
