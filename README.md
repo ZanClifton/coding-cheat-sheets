@@ -47,7 +47,9 @@ You're welcome to refer to these on GitHub, fork the repo or clone it if you thi
 6. [Aggregate Functions](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#6-aggregate-functions)
 7. [Constraints](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#7-constraints)
 8. [Manipulation](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#8-manipulation)
-9. [Hints and Tips](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#9-hints-and-tips)
+9. [DISTINCT ON Query](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#9-distinct-on-query)
+10. [Hints and Tips](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#10-hints-and-tips)
+11. [Things to Add](https://github.com/ZanClifton/coding-cheat-sheets/blob/main/cheatsheets/postgresql.md#11-things-to-add)
 
 
 
