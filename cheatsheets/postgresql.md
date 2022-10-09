@@ -176,5 +176,7 @@ When performing a calculation which requires rounding of a number of decimal pla
   - RANK()
   - DENSE_RANK() (RANK but it forces numbering to continue sequentially)
   - PARTITION BY
+  - VIEW/MATERIALISED VIEW
 
 ![image](https://user-images.githubusercontent.com/96394256/194759718-54dc4e97-478c-4c22-bd74-6348e0c45178.png)
+![image](https://user-images.githubusercontent.com/96394256/194759872-8c5c70c0-6377-43ed-8f32-800017540395.png)
